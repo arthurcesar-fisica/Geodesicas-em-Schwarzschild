@@ -39,9 +39,9 @@ def criar_grade(tamanho=40, espacamento=5):
 if __name__ == "__main__":
     configurar_cena()
     
-    # Adicione o loop aqui para manter a janela aberta durante o teste
+    # Adicionando o loop para manter a janela aberta durante a visualização
     while True:
-        rate(10) # 10 frames por segundo é suficiente para uma cena parada
+        rate(10)
 
 
 
