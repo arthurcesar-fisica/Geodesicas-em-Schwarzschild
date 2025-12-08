@@ -1,23 +1,27 @@
 # Simulação da Geodésica de Fótons na Métrica de Schwarzschild
+                                
+## Modelo Físico
+
+Na Relatividade Geral de Einstein, as equações de campo descrevem como a geometria do espaço-tempo é curvada pela presença de massa e energia. Neste contexto, a única solução esfericamente simétrica para o vácuo ao redor de um corpo estático é a **Métrica de Schwarzschild**, cuja unicidade é garantida pelo Teorema de Birkhoff.
+
+A geometria do problema é descrita pelo seguinte elemento de linha:
+
+$$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2$$
+
+###  A Simulação
+
+Nesta simulação, calculamos as trajetórias de fótons (luz) ao passarem nas proximidades de um buraco negro. Como mostrado na Figura 1, observamos fenômenos como a deflexão da luz e a captura orbital.
+
 <p align="center">
-  <img src="./imagens/geodesica_fotons.png" width="600" title="Geodésicas de Schwarzschild">
+  <img src="./imagens/Geodesica 5 fótons.png" width="600" title="Simulação das Geodésicas">
+  <br>
+  <em>Figura 1: Trajetórias de fótons (coloridos) sendo defletidos ou capturados pelo buraco negro.</em>
 </p>
 
-                                   
+Para realizar essa simulação, não podemos utilizar a gravitação Newtoniana clássica, visto que fótons não possuem massa de repouso ($m=0$). Em vez disso, utilizamos o formalismo do **Potencial Efetivo** ($V_{eff}$) derivado da métrica de Schwarzschild:
 
-# Modelo Físico
+$$V_{eff}(r) = \frac{L^2}{r^2} \left(1 - \frac{r_s}{r}\right)$$
 
-Na teoria de Einstein da Relatividade Geral, a equação de campo proposta nos mostra como é dada a geometria do tecido espaço-tempo quando neste esta presente um corpo, com massa e momento. Nesse contexto, a única solução esfericamente simétrica e no vácuo é a métrica de Schwarzschild, que é garantida pelo teorema de Birkhoff.
+A partir desse potencial, obtemos a equação de movimento radial. O termo de correção relativística gera uma "força atrativa" extra (proporcional a $r^{-5}$), permitindo a existência de órbitas instáveis e a captura da luz:
 
-Nessa simulação, incidimos fótons (pequenas esferas coloridas como mostrado na Figura 1) e observamos a trajetória que eles executam ao passar pelas proximidades de um buraco negro. Para isso, não podemos usar o conceito clássico da gravitação Newtoniana visto que, os fótons não apresentam massa de repouso. Ao invés disso, utilizamos o potencial efetivo, que é obtido a partir da métrica de Schwarzschild, e assim conseguimos construir a geodésica dos fótons quando próximos do buraco negro.
-
-# Modelo Matemático
-
-A métrica é dada por: 
-                                        METRICA
-No caso da geodésica nula (luz), a equação do movimento pode ser obtida usando o potencial efetivo com a devida correção relativística:
-
-  $$V_{eff}(r) = \frac{L^2}{r^2} \left(1 - \frac{r_s}{r}\right)$$
-
-Derivando o potencial efetivo, podemos obter a 'força fictícia' que atua sobre o fóton e assim temos a aceleração resultante: 
-                                        ACELERAÇÃO
+$$\vec{a}_{eff} \propto - \frac{3GM L^2}{r^5} \vec{r}$$
