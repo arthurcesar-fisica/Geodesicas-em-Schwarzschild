@@ -40,19 +40,19 @@ Para executar a simulação, você precisa do **Python 3.10+** instalado.
 
 2. Entre na pasta do projeto:
 
-```bash
+```
   cd Geodesicas-em-Schwarzschild/Schwarzschild_simulacao
 ```
 
 4.Instale as dependências:
 
-```bash
+```
   pip install numpy vpython scipy
 ```
 
 5. Execução: Basta rodar o arquivo principal no terminal:
 
-```bash
+```
    python main.py
 ```
 
