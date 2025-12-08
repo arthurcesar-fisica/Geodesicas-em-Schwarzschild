@@ -60,14 +60,19 @@ A simulação abrirá automaticamente no seu navegador padrão ou em uma janela 
 
 ## Estrutura do Código
 O projeto foi organizado de forma modular para separar a física da visualização:
+
   
   ```main.py```: Loop principal da simulação e configuração inicial dos fótons.
+
   
  ``` physics.py```: Cálculo da Hamiltoniana e o integrador Runge-Kutta 4 (RK4).
+
   
   ```config.py```: Arquivo de configuração com constantes físicas ($M$, $r_s$) e parâmetros ajustáveis.
+
   
   ```visualizacao.py```: Gerencia a cena do VPython, renderização do Buraco Negro e trilhas dos fótons.
+
 
 ## Método Numérico e Precisão
 
