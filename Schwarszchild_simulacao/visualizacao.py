@@ -5,8 +5,8 @@ import numpy as np
 
 def configurar_cena():
     scene.background = color.black
-    scene.width = 1400
-    scene.height = 800
+    scene.width = 2000
+    scene.height = 1200
     scene.center = vector (0, 0, 0)
     buraco_negro = sphere(pos=vec(0,0,0), radius = cfg.r_s, color = color.black)
     for i in range(350):
