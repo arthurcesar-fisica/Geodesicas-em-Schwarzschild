@@ -65,7 +65,7 @@ O projeto foi organizado de forma modular para separar a física da visualizaç�
   ```main.py```: Loop principal da simulação e configuração inicial dos fótons.
 
   
- ``` physics.py```: Cálculo da Hamiltoniana e o integrador Runge-Kutta 4 (RK4).
+ ```physics.py```: Cálculo da Hamiltoniana e o integrador Runge-Kutta 4 (RK4).
 
   
   ```config.py```: Arquivo de configuração com constantes físicas ($M$, $r_s$) e parâmetros ajustáveis.
@@ -85,13 +85,13 @@ Renderização: Para compensar o custo computacional do dt pequeno, realizamos m
 
 ## Ferramentas Utilizadas:
 
-``` Python ``` : Linguagem base.
+```Python``` : Linguagem base.
 
-``` NumPy``` : Álgebra linear e operações vetoriais otimizadas.
+```NumPy``` : Álgebra linear e operações vetoriais otimizadas.
 
-``` VPython``` : Renderização 3D em tempo real baseada em WebGL.
+```VPython``` : Renderização 3D em tempo real baseada em WebGL.
 
-``` Git``` : Controle de versão.
+```Git``` : Controle de versão.
 
 ## Próximos Passos 
 
