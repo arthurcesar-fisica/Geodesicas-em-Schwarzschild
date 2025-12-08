@@ -34,10 +34,11 @@ Para executar a simulação, você precisa do **Python 3.10+** instalado.
 ### Instalação
 1. Clone este repositório:
 
-git clone [https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git](https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git)
+```bash
+        git clone [https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git](https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git)
 
 2. Entre na pasta do projeto:
-
+  
   cd Geodesicas-em-Schwarzschild/Schwarzschild_simulacao
 
 4.Instale as dependências:
