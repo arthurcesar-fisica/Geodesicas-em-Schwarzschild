@@ -13,6 +13,8 @@ Nessa simulação, incidimos fótons (pequenas esferas coloridas como mostrado n
 A métrica é dada por: 
                                         METRICA
 No caso da geodésica nula (luz), a equação do movimento pode ser obtida usando o potencial efetivo com a devida correção relativística:
+
                                         $$V_{eff}(r) = \frac{L^2}{r^2} \left(1 - \frac{r_s}{r}\right)$$
+
 Derivando o potencial efetivo, podemos obter a 'força fictícia' que atua sobre o fóton e assim temos a aceleração resultante: 
                                         ACELERAÇÃO
