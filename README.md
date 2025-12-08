@@ -76,7 +76,7 @@ Quanto a precisão, dois fatores foram necessários para que a trajetória dos f
 
 Passo Temporal Pequeno ($$dt$$): Isso garante a trajetória suave;
 
-Renderização: Para compensar o custo computacional do dt pequeno, realizamos múltiplos passos de cálculo físico para cada frame de vídeo desenhado (steps_per_frame). Isso garante uma visualização fluida sem sacrificar a precisão matemática da simulação.
+Renderização: Para compensar o custo computacional do dt pequeno, realizamos múltiplos passos de cálculo físico para cada frame de vídeo desenhado (passo_por_frame). Isso garante uma visualização fluida sem sacrificar a precisão matemática da simulação.
 
 ## Ferramentas Utilizadas:
 
