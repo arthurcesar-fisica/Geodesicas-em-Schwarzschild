@@ -8,7 +8,7 @@ A geometria do problema é descrita pelo seguinte elemento de linha:
 
 $$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2$$
 
-###  A Simulação
+##  A Simulação
 
 Nesta simulação, calculamos as trajetórias de fótons (luz) ao passarem nas proximidades de um buraco negro. Como mostrado na Figura 1, observamos fenômenos como a deflexão da luz e a captura orbital.
 
