@@ -36,18 +36,25 @@ Para executar a simulação, você precisa do **Python 3.10+** instalado.
 
 ```bash
         git clone [https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git](https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git)
+```
 
 2. Entre na pasta do projeto:
-  
+
+```bash
   cd Geodesicas-em-Schwarzschild/Schwarzschild_simulacao
+```
 
 4.Instale as dependências:
-    
+
+```bash
   pip install numpy vpython scipy
+```
 
 5. Execução: Basta rodar o arquivo principal no terminal:
 
+```bash
    python main.py
+```
 
 A simulação abrirá automaticamente no seu navegador padrão ou em uma janela dedicada.
 
@@ -55,16 +62,31 @@ A simulação abrirá automaticamente no seu navegador padrão ou em uma janela 
 O projeto foi organizado de forma modular para separar a física da visualização:
   
   main.py: Loop principal da simulação e configuração inicial dos fótons.
+  
   physics.py: Cálculo da Hamiltoniana e o integrador Runge-Kutta 4 (RK4).
+  
   config.py: Arquivo de configuração com constantes físicas ($M$, $r_s$) e parâmetros ajustáveis.
+  
   visualizacao.py: Gerencia a cena do VPython, renderização do Buraco Negro e trilhas dos fótons.
+
+## Método Numérico e Precisão
+
+Para resolver as equações de movimento, utilizamos o integrador Runge-Kutta de 4ª Ordem (RK4). Este método foi escolhido por sua estabilidade e precisão na conservação de energia orbital comparado ao método de Euler simples.
+Quanto a precisão, dois fatores foram necessários para que a trajetória dos fótons seja 'suave' nas proximidades do buraco negro:
+
+Passo Temporal Pequeno ($$dt$$): Isso garante a trajetória suave;
+
+Renderização: Para compensar o custo computacional do dt pequeno, realizamos múltiplos passos de cálculo físico para cada frame de vídeo desenhado (steps_per_frame). Isso garante uma visualização fluida sem sacrificar a precisão matemática da simulação.
 
 ## Ferramentas Utilizadas:
 
-Python: Linguagem base.
-NumPy: Álgebra linear e operações vetoriais otimizadas.
-VPython: Renderização 3D em tempo real baseada em WebGL.
-Git: Controle de versão.
+```bash Python ```: Linguagem base.
+
+```bash NumPy```: Álgebra linear e operações vetoriais otimizadas.
+
+```bash VPython```: Renderização 3D em tempo real baseada em WebGL.
+
+```bash Git```: Controle de versão.
 
 **Autor**: Arthur Cesar
 
