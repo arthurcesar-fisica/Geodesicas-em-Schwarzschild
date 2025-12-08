@@ -1,5 +1,7 @@
 # Simulação da Geodésica de Fótons na Métrica de Schwarzschild
-![Simulação de Schwarzschild](./imagens/geodesica_fotons.png)
+<p align="center">
+  <img src="./imagens/geodesica_fotons.png" width="600" title="Geodésicas de Schwarzschild">
+</p>
 
                                    
 
