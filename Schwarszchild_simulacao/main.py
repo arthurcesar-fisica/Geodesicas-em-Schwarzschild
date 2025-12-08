@@ -12,27 +12,6 @@ alturas = [5.0, (3/2) * np.sqrt(3) * cfg.r_s, 5.5, 6.0, 7.0 ]
 lista_h = []
 lista_esferas = []
 
-
-# Vamos criar uma grade de 15x5 fótons
-'''
-alturas_y = np.linspace(4.5, 8.0, 5)
-profundidades_z = np.linspace(-2.0, 2.0, 5)
-
-print(f"Iniciando com {len(alturas_y) * len(profundidades_z)} fótons...")
-
-# Loop duplo para criar a parede
-for y in alturas_y:
-    for z in profundidades_z:
-        h = np.array([-20*cfg.M, y, z, 1.0, 0, 0])
-        lista_h.append(h)
-        
-        # Esferas menores e com rastro mais fino para não poluir
-        # Usamos uma cor ciano claro para parecer "luz"
-        esfera = sphere(pos=vector(h[0], h[1], h[2]), 
-                        make_trail=True, trail_radius=0.02, 
-                        radius=0.1, color=color.yellow, opacity=0.6)
-        lista_esferas.append(esfera)'''
-
 cores =[color.red, color.orange, color.yellow, color.blue, color.cyan]
 for i in range(len(alturas)):
     y_inicial = alturas[i]
