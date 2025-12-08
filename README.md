@@ -80,13 +80,13 @@ Renderização: Para compensar o custo computacional do dt pequeno, realizamos m
 
 ## Ferramentas Utilizadas:
 
-```bash Python ```: Linguagem base.
+```bash Python ``` : Linguagem base.
 
-```bash NumPy```: Álgebra linear e operações vetoriais otimizadas.
+```bash NumPy``` : Álgebra linear e operações vetoriais otimizadas.
 
-```bash VPython```: Renderização 3D em tempo real baseada em WebGL.
+```bash VPython``` : Renderização 3D em tempo real baseada em WebGL.
 
-```bash Git```: Controle de versão.
+```bash Git``` : Controle de versão.
 
 ## Próximos Passos 
 
