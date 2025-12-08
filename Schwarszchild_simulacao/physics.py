@@ -16,11 +16,11 @@ def hamiltoniana_sistema(t, h):
     r = np.sqrt(r_sq)
     
     # 3. Momento Angular (L = r x v)
-    # O "cross" calcula o produto vetorial
+  
     L_vec = np.cross(r_vec, v_vec)
-    L_sq = np.dot(L_vec, L_vec) # L ao quadrado
+    L_sq = np.dot(L_vec, L_vec) 
     
-    # 4. A Força da Relatividade Geral
+    # 4. A Força 
     # Para a luz, a força radial efetiva vem do termo -3ML^2/r^4
     # Como queremos aceleração vetorial, multiplicamos por (x/r), ficando r^5 no denominador
     
