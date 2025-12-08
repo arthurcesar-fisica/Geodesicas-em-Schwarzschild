@@ -1,6 +1,7 @@
 # Simulação da Geodésica de Fótons na Métrica de Schwarzschild
+![Simulação de Schwarzschild](./imagens/geodesica_fotons.png)
 
-                                        IMAGEM (Fig. 1)
+                                   
 
 # Modelo Físico
 
