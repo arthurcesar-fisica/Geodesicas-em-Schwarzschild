@@ -13,7 +13,7 @@ $$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right
 Nesta simulação, calculamos as trajetórias de fótons (luz) ao passarem nas proximidades de um buraco negro. Como mostrado na Figura 1, observamos fenômenos como a deflexão da luz e a captura orbital.
 
 <p align="center">
-  <img src="./imagens/Geodesica 5 fótons.png" width="600" title="Simulação das Geodésicas">
+  <img src="./imagens/geodesica_fotons.png" width="600" title="Simulação das Geodésicas">
   <br>
   <em>Figura 1: Trajetórias de fótons (coloridos) sendo defletidos ou capturados pelo buraco negro.</em>
 </p>
