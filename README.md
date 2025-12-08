@@ -34,7 +34,7 @@ Para executar a simulação, você precisa do **Python 3.10+** instalado.
 ### Instalação
 1. Clone este repositório:
 
-```bash
+```
         git clone [https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git](https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git)
 ```
 
@@ -61,13 +61,13 @@ A simulação abrirá automaticamente no seu navegador padrão ou em uma janela 
 ## Estrutura do Código
 O projeto foi organizado de forma modular para separar a física da visualização:
   
-  main.py: Loop principal da simulação e configuração inicial dos fótons.
+  ```main.py```: Loop principal da simulação e configuração inicial dos fótons.
   
-  physics.py: Cálculo da Hamiltoniana e o integrador Runge-Kutta 4 (RK4).
+ ``` physics.py```: Cálculo da Hamiltoniana e o integrador Runge-Kutta 4 (RK4).
   
-  config.py: Arquivo de configuração com constantes físicas ($M$, $r_s$) e parâmetros ajustáveis.
+  ```config.py```: Arquivo de configuração com constantes físicas ($M$, $r_s$) e parâmetros ajustáveis.
   
-  visualizacao.py: Gerencia a cena do VPython, renderização do Buraco Negro e trilhas dos fótons.
+  ```visualizacao.py```: Gerencia a cena do VPython, renderização do Buraco Negro e trilhas dos fótons.
 
 ## Método Numérico e Precisão
 
@@ -80,13 +80,13 @@ Renderização: Para compensar o custo computacional do dt pequeno, realizamos m
 
 ## Ferramentas Utilizadas:
 
-```bash Python ``` : Linguagem base.
+``` Python ``` : Linguagem base.
 
-```bash NumPy``` : Álgebra linear e operações vetoriais otimizadas.
+``` NumPy``` : Álgebra linear e operações vetoriais otimizadas.
 
-```bash VPython``` : Renderização 3D em tempo real baseada em WebGL.
+``` VPython``` : Renderização 3D em tempo real baseada em WebGL.
 
-```bash Git``` : Controle de versão.
+``` Git``` : Controle de versão.
 
 ## Próximos Passos 
 
