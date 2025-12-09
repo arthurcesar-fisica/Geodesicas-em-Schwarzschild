@@ -6,11 +6,11 @@ Na Relatividade Geral de Einstein (RG), as equações de campo descrevem como a 
 
 A geometria do problema é descrita pelo seguinte elemento de linha:
 
-$$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2$$+
+  $$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2$$+
 
 Para o disco de acreção, usamos a Mecânica Newtoniana, isso evita a necessidade de correções relativísticas para matéria em órbita estável, mantendo o foco visual na distorção da luz:
 
-$$\vec{a}_{materia} = - \frac{GM}{r^3} \vec{r}$$
+  $$\vec{a}_{materia} = - \frac{GM}{r^3} \vec{r}$$
 
 ##  A Simulação
 
