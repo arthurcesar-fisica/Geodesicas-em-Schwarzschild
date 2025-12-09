@@ -2,7 +2,7 @@
                                 
 ## Modelo Físico
 
-Na Relatividade Geral de Einstein, as equações de campo descrevem como a geometria do espaço-tempo é curvada pela presença de massa e energia. Neste contexto, a única solução esfericamente simétrica para o vácuo ao redor de um corpo estático é a **Métrica de Schwarzschild**, cuja unicidade é garantida pelo Teorema de Birkhoff.
+Na Relatividade Geral de Einstein (RG), as equações de campo descrevem como a geometria do espaço-tempo é curvada pela presença de massa e energia. Neste contexto, a única solução esfericamente simétrica para o vácuo ao redor de um corpo estático é a **Métrica de Schwarzschild**, cuja unicidade é garantida pelo Teorema de Birkhoff.
 
 A geometria do problema é descrita pelo seguinte elemento de linha:
 
@@ -62,28 +62,32 @@ A simulação abrirá automaticamente no seu navegador padrão ou em uma janela 
 O projeto foi organizado de forma modular para separar a física da visualização:
 
   
-  ```main.py```: Loop principal da simulação e configuração inicial dos fótons.
+  `main.py`: Loop principal da simulação e configuração inicial dos fótons.
 
   
- ```physics.py```: Cálculo da Hamiltoniana e o integrador Runge-Kutta 4 (RK4).
+`physics.py`: Contém as "Leis da Física".
+    * `aceleracao_luz()`: Calcula a força geodésica na métrica de Schwarzschild.
+    * `aceleracao_materia()`: Calcula a gravidade newtoniana.
+    * `hamiltoniana_sistema()`: Implementação original via mecânica hamiltoniana (mantida para referência).
 
   
-  ```config.py```: Arquivo de configuração com constantes físicas ($M$, $r_s$) e parâmetros ajustáveis.
+  `config.py`: Arquivo de configuração com constantes físicas ($M$, r_s, c$) e parâmetros ajustáveis.
 
   
-  ```visualizacao.py```: Gerencia a cena do VPython, renderização do Buraco Negro e trilhas dos fótons.
+  `visualizacao.py`: Gerencia a cena do VPython, renderização do Buraco Negro e trilhas dos fótons.
 
 
-## Método Numérico e Precisão
+## Decisões Técnicas e Métodos Numéricos
 
-Para resolver as equações de movimento, utilizamos o integrador Runge-Kutta de 4ª Ordem (RK4). Este método foi escolhido por sua estabilidade e precisão na conservação de energia orbital comparado ao método de Euler simples.
-Quanto a precisão, dois fatores foram necessários para que a trajetória dos fótons seja 'suave' nas proximidades do buraco negro:
+###  De RK4 para Velocity Verlet
+Inicialmente, o projeto foi realizado utilizando o integrador **Runge-Kutta de 4ª Ordem (RK4)**, baseado nas equações de Hamilton. Embora o RK4 seja excelente para precisão de curto prazo, notamos que ele não conserva a energia do sistema em longas simulações orbitais, fazendo com que o disco de acreção espiralasse para fora ou para dentro artificialmente (drift de energia).
+Para corrigir isso e garantir a estabilidade das órbitas do disco e a precisão da captura de fótons, migramos para o algoritmo **Velocity Verlet**.
+Vantagens do Velocity Verlet neste projeto:
+1.   Preserva o volume no espaço de fase, garantindo conservação de energia a longo prazo para o disco de acreção.
+2.   Requer apenas uma avaliação de força por passo (contra 4 do RK4), permitindo simular centenas de partículas simultaneamente com FPS alto.
+3.   Facilita a aplicação de forças diferentes para objetos diferentes (Newton para o disco, RG para a luz) no mesmo loop.
 
-Passo Temporal Pequeno ($$dt$$): Isso garante a trajetória suave;
-
-Renderização: Para compensar o custo computacional do dt pequeno, realizamos múltiplos passos de cálculo físico para cada frame de vídeo desenhado (passo_por_frame). Isso garante uma visualização fluida sem sacrificar a precisão matemática da simulação.
-
-## Ferramentas Utilizadas:
+## Ferramentas Utilizadas
 
 ```Python``` : Linguagem base.
 
@@ -93,11 +97,18 @@ Renderização: Para compensar o custo computacional do dt pequeno, realizamos m
 
 ```Git``` : Controle de versão.
 
+## Seção de Resultados
+
+A trajetória de cada um dos fótons é alterada nas proximidades do buraco negro. Um caso especial, é o caminho realizado pelo fóton (branco) que executa uma volta completa antes de ser emitido.
+
+Como previsto pela Relatividade Geral, o fóton não é imediatamente capturado nem escapa diretamente, ele entra temporariamente na Esfera de Fótons ($r = 1.5r_s$), executando órbitas instáveis ao redor do buraco negro antes de ser dispersado. Isso demonstra a estabilidade numérica do integrador Velocity Verlet em regiões de alta gravidade.
+
+
 ## Próximos Passos 
 
 Este projeto está em desenvolvimento contínuo. As próximas atualizações visam expandir tanto a precisão física quanto a qualidade visual:
 
-- [ ] **Disco de Acreção:** Adicionar elementos visuais para simular matéria orbitando o buraco negro, permitindo visualizar o efeito de lente gravitacional sobre o disco.
+- [X] **Disco de Acreção:** Adicionar elementos visuais para simular matéria orbitando o buraco negro, permitindo visualizar o efeito de lente gravitacional sobre o disco.
 - [ ] **Métrica de Kerr:** Expandir a simulação para buracos negros em rotação (solução de Kerr), onde a simetria esférica é quebrada.
 - [ ] **Análise de Energia:** Implementar gráficos em tempo real mostrando a conservação da energia e do momento angular para validar a precisão do integrador numérico.
 - [ ] **Interface Interativa:** Permitir que o usuário altere o parâmetro de impacto ($b$) e a posição inicial dos fótons durante a execução.
