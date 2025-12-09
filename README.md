@@ -66,9 +66,12 @@ O projeto foi organizado de forma modular para separar a física da visualizaç�
 
   
 `physics.py`: Contém as "Leis da Física".
-    * `aceleracao_luz()`: Calcula a força geodésica na métrica de Schwarzschild.
-    * `aceleracao_materia()`: Calcula a gravidade newtoniana.
-    * `hamiltoniana_sistema()`: Implementação original via mecânica hamiltoniana (mantida para referência).
+    
+  * `aceleracao_luz()`: Calcula a força geodésica na métrica de Schwarzschild.
+  
+  * `aceleracao_materia()`: Calcula a gravidade newtoniana.
+    
+  * `hamiltoniana_sistema()`: Implementação original via mecânica hamiltoniana (mantida para referência).
 
   
   `config.py`: Arquivo de configuração com constantes físicas ($M$, r_s, c$) e parâmetros ajustáveis.
