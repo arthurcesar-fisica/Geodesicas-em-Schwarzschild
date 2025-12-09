@@ -63,6 +63,10 @@ def velocidade_orbital_circular(posicao):
    vz = 0 # Disco plano
    return np.array([vx, vy, vz])
 
+
+
+
+
 '''def hamiltoniana_sistema(t, h):
     x, y, z, px, py, pz = h
     
