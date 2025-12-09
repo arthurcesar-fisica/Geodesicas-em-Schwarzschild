@@ -6,7 +6,7 @@ Na Relatividade Geral de Einstein (RG), as equações de campo descrevem como a 
 
 A geometria do problema é descrita pelo seguinte elemento de linha:
 
-  $$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2$$+
+  $$ds^2 = -\left(1 - \frac{r_s}{r}\right)c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2$$
 
 Para o disco de acreção, usamos a Mecânica Newtoniana, isso evita a necessidade de correções relativísticas para matéria em órbita estável, mantendo o foco visual na distorção da luz:
 
@@ -36,8 +36,8 @@ $$\vec{a}_{eff} \propto - \frac{3GM L^2}{r^5} \vec{r}$$
 
 ### Visualização do Disco de Acreção
 
-O disco foi geraddo utilizando uma distribuição gaussiana, posicionando as partículas com uma variação aleatória no eixo vertical ($y$), isso cria um volume visual com efeito de núvem de poeira.
-Além disso, foi utilizado propriedades de renderização (`opacity` e `emissive`) do VPython para simular o brilho difuso do gás superaquecido, permitindo ver as trajetórias dos fótons através do disco. 
+O disco foi gerado utilizando uma distribuição gaussiana, posicionando as partículas com uma variação aleatória no eixo vertical ($y$), isso cria um volume visual com efeito de núvem de poeira.
+Além disso, foram utilizadas propriedades de renderização (`opacity` e `emissive`) do VPython para simular o brilho difuso do gás superaquecido, permitindo ver as trajetórias dos fótons através do disco. 
 
 ##  Como Rodar a Simulação
 
@@ -47,8 +47,8 @@ Para executar a simulação, você precisa do **Python 3.10+** instalado.
 ### Instalação
 1. Clone este repositório:
 
-```
-        git clone [https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git](https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git)
+```bash
+   git clone [https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git](https://github.com/arthurcesar-fisica/Geodesicas-em-Schwarzschild.git)
 ```
 
 2. Entre na pasta do projeto:
