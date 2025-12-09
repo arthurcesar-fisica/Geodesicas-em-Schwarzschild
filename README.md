@@ -126,7 +126,7 @@ Este projeto está em desenvolvimento contínuo. As próximas atualizações vis
 
 - [X] **Disco de Acreção:** Adicionar elementos visuais para simular matéria orbitando o buraco negro, permitindo visualizar o efeito de lente gravitacional sobre o disco.
 - [ ] **Métrica de Kerr:** Expandir a simulação para buracos negros em rotação (solução de Kerr), onde a simetria esférica é quebrada.
-- [ ] **Análise de Energia:** Implementar gráficos em tempo real mostrando a conservação da energia e do momento angular para validar a precisão do integrador numérico.
+- [ ] **Ray Tracing:** Implementar um renderizador (não-dinâmico) para visualizar a distorção ótica do disco
 - [ ] **Interface Interativa:** Permitir que o usuário altere o parâmetro de impacto ($b$) e a posição inicial dos fótons durante a execução.
 
 **Autor**: Arthur Cesar
