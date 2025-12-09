@@ -60,7 +60,7 @@ Para executar a simulação, você precisa do **Python 3.10+** instalado.
 4.Instale as dependências:
 
 ```
-  pip install numpy vpython scipy
+  pip install numpy vpython 
 ```
 
 5. Execução: Basta rodar o arquivo principal no terminal:
